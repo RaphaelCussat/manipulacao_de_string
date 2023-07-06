@@ -44,11 +44,20 @@ def capitalize_sentences(name):
         name = capitalize(name, delimiter)
     return name
 
+#Exercício 05
+def is_polindroma(name):
+    if name == name[::-1]:
+        return True
+    else:
+        return False
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print(reverse_sentence('Ola PWC, eu me chamo Raphael'))
     print(remove_duplicates('Banana'))
     print(find_longest_palindroma('babdbabd'))
     print(capitalize_sentences('olá. como você está? tudo bem? eu estou bem! obrigado.'))
+    print(is_polindroma('racecar'))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
