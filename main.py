@@ -18,9 +18,21 @@ def remove_duplicates(string):
             unique_chars += char
     return unique_chars.lower()
 
+def find_longest_palindroma(name):
+    result = ''
+    for i in range(len(name)):
+        for j in range(len(name)):
+            if j <= i:
+                continue
+            aux = name[i:j + 1]
+            if aux == aux[::-1]:
+                if len(aux) > len(result):
+                    result = aux
+    return result
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print(reverse_sentence('Ola PWC, eu me chamo Raphael'))
     print(remove_duplicates('Banana'))
+    print(find_longest_palindroma('babdbabd'))
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
